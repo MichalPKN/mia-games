@@ -1,0 +1,14 @@
+main .games {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+    grid-template-rows: auto;
+    .game {
+        padding: 1em;
+        background-color: rgb(109, 109, 109);
+        p {
+            margin-top: 0.5em;
+        }
+    }
+}
