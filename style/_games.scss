@@ -7,8 +7,17 @@ main .games {
     .game {
         padding: 1em;
         background-color: rgb(109, 109, 109);
+        h2 {
+            font-size: 1.5em;
+        }
         p {
             margin-top: 0.5em;
+        }
+        img {
+            margin-top: 1em;
+            object-fit: cover;
+            width: 100%;
+            height: 12em;
         }
     }
 }
