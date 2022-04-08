@@ -1,6 +1,6 @@
 {
+    "home": "miagames",
     "games": "Our games",
-    "produkty": "Naše produkty",
-    "kontakty": "Jak nás kontaktovat",
-    "404": "Ups 404"
-  }
+    "contacts": "our contacts",
+    "404": "error 404"
+}
