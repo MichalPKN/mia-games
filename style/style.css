@@ -37,6 +37,12 @@ a {
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #515151;
 }
 
@@ -64,6 +70,10 @@ header nav a {
 .games .game {
   padding: 1em;
   background-color: #6d6d6d;
+}
+
+.games .game h2 {
+  font-size: 1.5em;
 }
 
 .games .game p {
