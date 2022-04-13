@@ -32,7 +32,7 @@ header h1 {
   font-size: 4em;
 }
 
-main .games {
+main #games {
   margin-top: 2em;
   display: -ms-grid;
   display: grid;
@@ -43,20 +43,20 @@ main .games {
       grid-template-rows: auto;
 }
 
-main .games .game {
+main #games .game {
   padding: 1em;
   background-color: #6d6d6d;
 }
 
-main .games .game h2 {
+main #games .game h2 {
   font-size: 1.5em;
 }
 
-main .games .game p {
+main #games .game p {
   margin-top: 0.5em;
 }
 
-main .games .game img {
+main #games .game img {
   margin-top: 1em;
   -o-object-fit: cover;
      object-fit: cover;
