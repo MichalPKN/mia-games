@@ -3,6 +3,7 @@ const xhttp = new XMLHttpRequest();
 const games = document.getElementById("games");
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
+        console.log(xhttp.responseText);
         var object = JSON.parse(xhttp.responseText);
         var data = [];
         for (var i in object) {
@@ -28,7 +29,6 @@ xhttp.onreadystatechange = function() {
 
 
     }
-    console.log(games);
 };
-xhttp.open("GET", "app/database.php", true);
+xhttp.open("GET", "json", true);
 xhttp.send();

@@ -2,18 +2,19 @@
 
 class GamesController extends Controller {
 
-    private $page;
-    private $uriParams;
-
-    public function __construct(array $uriParams)
-    {
-        $this->page = array_shift($uriParams);
-        $this->uriParams = $uriParams;
-    }
-
     public function render(): string
     {
-        return "bruh";
+        $conn = mysqli_connect("localhost", "root", "", "games");
+        if ($conn === false) {
+            die("unable to connect to database");
+        }
+        $sql = "select * from games";
+        $result = mysqli_query($conn, $sql);
+        $dataArray = array();
+        while($row = mysqli_fetch_assoc($result)){
+            $dataArray[] = $row;
+        }
+        return json_encode($dataArray);
     }
 
 }

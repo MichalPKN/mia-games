@@ -1,7 +1,5 @@
 <?php
 
-require("Controller.php");
-
 class PageController extends Controller
 {
 
