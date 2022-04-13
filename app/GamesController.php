@@ -4,7 +4,7 @@ class GamesController extends Controller {
 
     public function render(): string
     {
-        $conn = mysqli_connect("localhost", "root", "", "games");
+        $conn = mysqli_connect(URL, "root", "", "games");
         if ($conn === false) {
             die("unable to connect to database");
         }
