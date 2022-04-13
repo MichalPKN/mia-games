@@ -1,14 +1,9 @@
 <?php
-class PageController
-{
-    private $page;
-    private $uriParams;
 
-    public function __construct(array $uriParams)
-    {
-        $this->page = array_shift($uriParams);
-        $this->uriParams = $uriParams;
-    }
+require("Controller.php");
+
+class PageController extends Controller
+{
 
     public function render(): string
     {
