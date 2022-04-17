@@ -36,8 +36,11 @@ a {
   color: #90cee7;
 }
 
-header .content {
+header {
   background-color: #515151;
+}
+
+header .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,12 +49,34 @@ header .content {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 835px) {
+  header .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 header .content h1 {
   font-size: 4em;
 }
 
+header .content nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-column: 1fr 1fr 1fr;
+  gap: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 header .content nav a {
-  margin: 0 0.5em;
   font-size: 2em;
   text-decoration: none;
 }
