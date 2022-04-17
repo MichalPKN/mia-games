@@ -56,6 +56,10 @@ header nav a {
   text-decoration: none;
 }
 
+header nav .active {
+  color: #d2f1fd;
+}
+
 #games {
   margin-top: 2em;
   display: -ms-grid;
