@@ -1,6 +1,16 @@
 <?php
+
+/**
+ * Router class
+ */
 class Router
 {
+    /**
+     * routes to a specific page based on url parameters
+     *
+     * @param string $uri
+     * @return void
+     */
     public static function route(string $uri)
     {   
         $uriParams = explode("/", $uri);

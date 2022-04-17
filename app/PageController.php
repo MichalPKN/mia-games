@@ -1,8 +1,15 @@
 <?php
 
+/**
+ * PageController class
+ */
 class PageController extends Controller
 {
-
+    /**
+     * generates nav bar and page content from Template class
+     *
+     * @return string
+     */
     public function render(): string
     {
         $pages = json_decode(file_get_contents(DATA_DIR . "pages.json"), true);
