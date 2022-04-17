@@ -23,8 +23,6 @@ abstract class Controller {
     {
         $this->page = array_shift($uriParams);
         $this->uriParams = $uriParams;
-        var_dump($this->page);
-        var_dump($this->uriParams);
     }
 
 
