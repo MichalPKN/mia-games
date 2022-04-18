@@ -28,7 +28,7 @@ class PageController extends Controller
         return (new Template("page.html"))
             ->data([
                 'base' => URL . URL_DIR,
-                'title' => ($this->page == "home" ? "" : $pages[$this->page] . " | ") . "URL Router",
+                'title' => ($this->page == "home" ? "" : $pages[$this->page] . " | ") . "Mia Games",
                 'nav' => $nav,
                 'content' => file_get_contents(DATA_DIR . "$this->page.html")
             ])
