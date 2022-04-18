@@ -2,9 +2,6 @@
   margin: 0;
   padding: 0;
   font-size: 100%;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -69,11 +66,19 @@ header .content nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  grid-column: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   gap: 1em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 399px) {
+  header .content nav {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 header .content nav a {
@@ -94,6 +99,20 @@ header .content nav .active {
   gap: 2em;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
+}
+
+@media screen and (max-width: 900px) {
+  #games {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #games {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 #games .game {

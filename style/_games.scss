@@ -4,6 +4,12 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2em;
     grid-template-rows: auto;
+    @media screen and (max-width: 900px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: 500px) {
+        grid-template-columns: 1fr;
+    }
     .game {
         padding: 1em;
         background-color: rgb(109, 109, 109);
