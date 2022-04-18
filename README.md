@@ -1,7 +1,7 @@
 # MIA GAMES
 http://miagames.wz.cz/project/games  
 stránka fiktivní herní firmy, která ukazuje svoje hry z databáze  
-
+![image](https://user-images.githubusercontent.com/93346591/163873518-7884d0fb-8f37-4af3-9b4a-643dab6f3517.png)
 ## Použité technologie
 PHP, Javascript, HTML, CSS, SASS, SQL, JSON
 ## Databáze
