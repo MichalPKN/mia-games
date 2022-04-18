@@ -5,8 +5,15 @@ const xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function generateHTML() {
     if (this.readyState == 4 && this.status == 200) {
 
-        //gets json from XML HTTP response and converts it to array
-        var object = JSON.parse(xhttp.responseText);
+        // gets response from server and cuts non-json string (because of web hosting add)
+        var response = xhttp.responseText.substring(
+            xhttp.responseText.indexOf("[{"),
+            xhttp.responseText.lastIndexOf("}]") + 2
+        );
+        console.log(response);
+
+        // gets json from XML HTTP response and converts it to array
+        var object = JSON.parse(response);
         var data = [];
         for (var i in object) {
             data.push(object[i]);
