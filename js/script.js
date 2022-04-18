@@ -1,7 +1,7 @@
 console.log("cool games");
 const xhttp = new XMLHttpRequest();
 const games = document.getElementById("games");
-xhttp.onreadystatechange = function() {
+xhttp.onreadystatechange = function generateHTML() {
     if (this.readyState == 4 && this.status == 200) {
         console.log(xhttp.responseText);
         var object = JSON.parse(xhttp.responseText);
@@ -21,13 +21,11 @@ xhttp.onreadystatechange = function() {
             div.append(h2, p)
             if (game["img"]) {
                 var img = document.createElement("img");
-                img.src = "img/" + game["img"];
+                img.src = "data/img/" + game["img"];
                 div.append(img)
             }
             games.append(div);
         }
-
-
     }
 };
 xhttp.open("GET", "json", true);
