@@ -3,6 +3,7 @@ const xhttp = new XMLHttpRequest();
 const games = document.getElementById("games");
 xhttp.onreadystatechange = function generateHTML() {
     if (this.readyState == 4 && this.status == 200) {
+
         console.log(xhttp.responseText);
         var object = JSON.parse(xhttp.responseText);
         var data = [];

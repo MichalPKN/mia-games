@@ -1,7 +1,15 @@
 <?php
 
+/**
+ * GamesController class
+ */
 class GamesController extends Controller {
 
+    /**
+     * connects to sql database, converts it to json
+     *
+     * @return string
+     */
     public function render(): string
     {
         $conn = mysqli_connect(URL, "root", "", "games");
