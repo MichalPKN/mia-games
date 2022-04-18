@@ -1,18 +1,20 @@
-console.log("cool games");
-const xhttp = new XMLHttpRequest();
 const games = document.getElementById("games");
+
+// sends a XML HTTP request to /json
+const xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function generateHTML() {
     if (this.readyState == 4 && this.status == 200) {
 
-        console.log(xhttp.responseText);
+        //gets json from XML HTTP response and converts it to array
         var object = JSON.parse(xhttp.responseText);
         var data = [];
         for (var i in object) {
             data.push(object[i]);
         }
         console.log(data);
+
+        // for each game in array creates html and adds it to games div
         for (let game of data) {
-            console.log(game)
             var div = document.createElement("div");
             div.className = "game";
             var h2 = document.createElement("h2");
