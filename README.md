@@ -1,5 +1,5 @@
 # MIA GAMES
-http://miagames.wz.cz/project/games  
+http://www.miagames.wz.cz/project/games  
   
 stránka fiktivní herní firmy, která ukazuje svoje hry z databáze  
   
